@@ -34,3 +34,8 @@ Roadmap
 
 * Custom rooms + rights management
 * Calendars feature
+
+### Wild ideas (not sure if needed)
+
+* Feed aggregator
+* XMPP interface (to use from jabber client)
