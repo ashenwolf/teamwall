@@ -28,6 +28,7 @@ Roadmap
 * New post type for blogging
     * File and image uploads
     * LaTeX/MathML support: http://www.mathjax.org/
+    * Code highlighting
 * Inline youtube video preview
 * Pagination
 
