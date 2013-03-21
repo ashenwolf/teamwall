@@ -29,10 +29,12 @@ Roadmap
     * File and image uploads
     * LaTeX/MathML support: http://www.mathjax.org/
 * Inline youtube video preview
+* Pagination
 
 ### Milestone 0.3
 
 * Custom rooms + rights management
+* Search
 * Calendars feature
 
 ### Wild ideas (not sure if needed)
