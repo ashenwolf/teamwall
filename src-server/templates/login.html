@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Login to CSRD Team Wall{% end %}
+
+{% block content %}
+    <div class="six columns push-three">
+        <h2>You shall not pass!</h2>
+        <hr>
+
+        {% if error %}
+            <div class="alert-box alert">
+              {{ error }}
+              <a href="" class="close">&times;</a>
+            </div>
+        {% end %}
+
+        <form method="post" action="/login">
+            {% module xsrf_form_html() %}
+            <div class="row">
+                <div class="two mobile-one columns">
+                    <label class="right inline">Login:</label>
+                </div>
+                <div class="ten mobile-three columns">
+                    <input type="text" name="login" placeholder="MATUKR Login" value="{{ login }}" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="two mobile-one columns">
+                    <label class="right inline">Password:</label>
+                </div>
+                <div class="ten mobile-three columns">
+                    <input type="password" name="password" placeholder="MATUKR Password" />
+                </div>
+            </div>
+            <input type="submit" class="round button right" value="Sign in" class="align-right" />
+        </form>
+
+        <br><br><img src="{{ static_url("images/gandalf.jpg") }}" alt="You shall not pass!" />
+    </div>
+{% end %}

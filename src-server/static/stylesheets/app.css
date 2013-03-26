@@ -1,0 +1,51 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+
+
+/* -----------------------------------------
+   Index
+----------------------------------------- */
+
+
+/* -----------------------------------------
+   Login screen
+----------------------------------------- */
+
+
+/* -----------------------------------------
+   Chat entry
+----------------------------------------- */
+
+.entry-collapsed {
+}
+
+.entry-collapsed p.entry-meta {
+	margin-top: -1em;
+	font-size: 0.9em;
+	color: #aaa;
+}
+
+.entry-collapsed ul.comments-block li {
+	font-size: 0.9em;
+	background:url(../images/icons/chat.png) 0 0 no-repeat;
+	padding-left: 20px;
+}
+
+.entry-collapsed ul.comments-block li.entry-new {
+	background:url(../images/icons/chat2.png) 0 0 no-repeat;
+}
+
+/* -----------------------------------------
+   Blog entry
+----------------------------------------- */

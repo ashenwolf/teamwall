@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>{% block title %}Team Wall{% end %}</title>
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="{{ static_url("stylesheets/foundation.css") }}">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="{{ static_url("stylesheets/foundation.min.css") }}">
+  <link rel="stylesheet" href="{{ static_url("stylesheets/app.css") }}">
+
+  <script src="{{ static_url("javascripts/modernizr.foundation.js") }}"></script>
+</head>
+<body>
+  
+  <!-- Header and Nav -->
+  
+  <header id="header" class="row">
+    <div class="twelve columns">
+      <div class="panel">
+        <h1>CSRD Team Wall</h1>
+      </div>
+    </div>
+  </header><!-- /header -->
+  
+  <!-- End Header and Nav -->
+  
+  
+  <div class="row" id="" class="content">
+  {% block content %}{% end %}
+  </div>
+    
+  
+  <!-- Footer -->
+  
+  <footer class="row">
+    <div class="twelve columns">
+      <hr />
+      <div class="row">
+        <div class="six columns">
+          <p>&copy; Copyright no one at all. Go to town.</p>
+        </div>
+        <div class="six columns">
+          <ul class="link-list right">
+            <li><a href="/my/settings" id="settings-link">Settings</a></li>
+            <li><a href="#logout" id="logout-link" onclick="document.forms['logout-form'].submit(); return false;">Logout</a></li>
+          </ul>
+          <form action="/logout" name="logout-form" method="post">{% module xsrf_form_html() %}</form>
+        </div>
+      </div>
+    </div> 
+  </footer>
+
+  <!-- Included JS Files (Compressed) -->
+  <script src="{{ static_url("javascripts/jquery.js") }}"></script>
+  <script src="{{ static_url("javascripts/foundation.min.js") }}"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="{{ static_url("javascripts/app.js") }}"></script>
+</body>
+</html>
